@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+.page {
+    width: 520px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.wide {
+    width: 760px;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+.student {
+    font-weight: bold;
+    color: #c0392b;
+    margin-bottom: 15px;
+}
+
+.logo-text {
+    font-size: 42px;
+    margin: 20px 0;
+}
+
+.menu a {
+    display: inline-block;
+    margin-right: 12px;
+}
+
+label {
+    display: inline-block;
+    width: 260px;
+    margin: 4px 0;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 170px;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    padding: 4px 10px;
+}
+
+.ingredient-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 40px;
+}
+
+.ingredient-group {
+    margin-bottom: 10px;
+}
+
+.name-box {
+    margin-top: 15px;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+<div class="page">
+    <h1>Login</h1>
+    <div class="student">2022810001 강명묵</div>
+    <div class="logo-text">🌮 Taco Cloud</div>
+    <p>New here? <a th:href="@{/register}">Click here to register</a></p>
+    <p class="error" th:if="${param.error}">Username or password is incorrect.</p>
+    <form method="post" th:action="@{/login}">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+        <label>Username: <input type="text" name="username"></label><br>
+        <label>Password: <input type="password" name="password"></label><br>
+        <input type="submit" value="Login">
+    </form>
+</div>
+</body>
+</html>

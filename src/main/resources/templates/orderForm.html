@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Order your taco</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+<div class="page wide">
+    <h1>Order your taco creations!</h1>
+    <div class="student">2022810001 강명묵</div>
+    <div class="logo-text">🌮 Taco Cloud</div>
+    <a th:href="@{/design}">Design another taco</a>
+
+    <form method="post" th:action="@{/orders}" th:object="${order}">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+        <h3>Deliver my taco masterpieces to...</h3>
+        <label>Name: <input type="text" th:field="*{deliveryName}"></label><br>
+        <label>Street address: <input type="text" th:field="*{deliveryStreet}"></label><br>
+        <label>City: <input type="text" th:field="*{deliveryCity}"></label><br>
+        <label>State: <input type="text" th:field="*{deliveryState}"></label><br>
+        <label>Zip code: <input type="text" th:field="*{deliveryZip}"></label><br>
+
+        <h3>Here's how I'll pay...</h3>
+        <label>Credit Card #: <input type="text" th:field="*{ccNumber}"></label><br>
+        <label>Expiration: <input type="text" th:field="*{ccExpiration}" placeholder="MM/YY"></label><br>
+        <label>CVV: <input type="text" th:field="*{ccCVV}"></label><br>
+        <input type="submit" value="Submit Order">
+    </form>
+</div>
+</body>
+</html>

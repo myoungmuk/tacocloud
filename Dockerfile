@@ -1,0 +1,9 @@
+FROM maven:3.9.9-eclipse-temurin-21 AS build
+WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
+
+FROM eclipse-temurin:21-jre-alpine
+COPY --from=build /app/target/java_prtc25_3-0.0.1-SNAPSHOT.jar taco.jar
+EXPOSE 8085
+ENTRYPOINT ["java", "-jar", "/taco.jar"]

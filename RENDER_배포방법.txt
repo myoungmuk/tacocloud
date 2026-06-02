@@ -1,0 +1,12 @@
+Render 배포 방법
+
+1. GitHub에 java_prtc25_3 프로젝트를 업로드합니다.
+2. Render에 로그인합니다.
+3. New + > Web Service를 선택합니다.
+4. GitHub 저장소를 연결합니다.
+5. Runtime은 Docker를 선택합니다.
+6. Environment Variables에 아래 값을 추가합니다.
+   MONGODB_URI = mongodb+srv://아이디:비밀번호@cluster0.xxxxx.mongodb.net/tacoclouddb?retryWrites=true&w=majority&appName=Cluster0
+7. Deploy Web Service를 누릅니다.
+8. 배포 후 Render URL로 접속합니다.
+9. 캡처할 때는 주소창의 Render URL이 보이게 캡처합니다.
